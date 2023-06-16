@@ -11,7 +11,7 @@ import SwiftUI
 struct mobioApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            OpeningView()
         }
     }
 }

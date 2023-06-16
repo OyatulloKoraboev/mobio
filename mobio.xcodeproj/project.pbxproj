@@ -14,7 +14,7 @@
 		4B14FC882A3C1E2B009E1E2F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC872A3C1E2B009E1E2F /* Resources.swift */; };
 		4B14FC8A2A3C1E43009E1E2F /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC892A3C1E43009E1E2F /* UIColor + Ext.swift */; };
 		4B14FC8E2A3C1EBD009E1E2F /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC8D2A3C1EBD009E1E2F /* SignIn.swift */; };
-		4B14FC902A3C1F0F009E1E2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC8F2A3C1F0F009E1E2F /* HomeView.swift */; };
+		4B14FC902A3C1F0F009E1E2F /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC8F2A3C1F0F009E1E2F /* OpeningView.swift */; };
 		4B14FC922A3C200F009E1E2F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC912A3C200F009E1E2F /* Login.swift */; };
 		4B14FCAB2A3C2072009E1E2F /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B14FC942A3C2072009E1E2F /* Montserrat-VariableFont_wght.ttf */; };
 		4B14FCAC2A3C2072009E1E2F /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B14FC952A3C2072009E1E2F /* Montserrat-Italic-VariableFont_wght.ttf */; };
@@ -39,6 +39,8 @@
 		4B14FCBF2A3C2072009E1E2F /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B14FCA92A3C2072009E1E2F /* OFL.txt */; };
 		4B14FCC02A3C2072009E1E2F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B14FCAA2A3C2072009E1E2F /* README.txt */; };
 		4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */; };
+		4B14FCC62A3C6547009E1E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC52A3C6547009E1E2F /* User.swift */; };
+		4BF46F142A3C760700A0250C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF46F132A3C760700A0250C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +52,7 @@
 		4B14FC872A3C1E2B009E1E2F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		4B14FC892A3C1E43009E1E2F /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		4B14FC8D2A3C1EBD009E1E2F /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
-		4B14FC8F2A3C1F0F009E1E2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4B14FC8F2A3C1F0F009E1E2F /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
 		4B14FC912A3C200F009E1E2F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4B14FC942A3C2072009E1E2F /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		4B14FC952A3C2072009E1E2F /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		4B14FCAA2A3C2072009E1E2F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		4B14FCC12A3C209B009E1E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Ext.swift"; sourceTree = "<group>"; };
+		4B14FCC52A3C6547009E1E2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4BF46F132A3C760700A0250C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +112,11 @@
 		4B14FC772A3C1DFA009E1E2F /* mobio */ = {
 			isa = PBXGroup;
 			children = (
+				4B14FCC42A3C6536009E1E2F /* Models */,
 				4B14FC932A3C2072009E1E2F /* Fonts */,
-				4B14FC8C2A3C1EAE009E1E2F /* SignIn */,
-				4B14FC8B2A3C1EA2009E1E2F /* Login */,
+				4B14FC8C2A3C1EAE009E1E2F /* Auth */,
 				4B14FC862A3C1E1B009E1E2F /* Resources */,
-				4B14FC8F2A3C1F0F009E1E2F /* HomeView.swift */,
+				4BF46F132A3C760700A0250C /* HomeView.swift */,
 				4B14FC782A3C1DFA009E1E2F /* mobioApp.swift */,
 				4B14FC7A2A3C1DFA009E1E2F /* ContentView.swift */,
 				4B14FC7C2A3C1DFB009E1E2F /* Assets.xcassets */,
@@ -140,20 +144,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4B14FC8B2A3C1EA2009E1E2F /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4B14FC8D2A3C1EBD009E1E2F /* SignIn.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		4B14FC8C2A3C1EAE009E1E2F /* SignIn */ = {
+		4B14FC8C2A3C1EAE009E1E2F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				4B14FC912A3C200F009E1E2F /* Login.swift */,
+				4B14FC8D2A3C1EBD009E1E2F /* SignIn.swift */,
+				4B14FC8F2A3C1F0F009E1E2F /* OpeningView.swift */,
 			);
-			path = SignIn;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		4B14FC932A3C2072009E1E2F /* Fonts */ = {
@@ -191,6 +189,14 @@
 				4B14FCA82A3C2072009E1E2F /* Montserrat-ExtraBoldItalic.ttf */,
 			);
 			path = static;
+			sourceTree = "<group>";
+		};
+		4B14FCC42A3C6536009E1E2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B14FCC52A3C6547009E1E2F /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +293,11 @@
 			files = (
 				4B14FC882A3C1E2B009E1E2F /* Resources.swift in Sources */,
 				4B14FC8E2A3C1EBD009E1E2F /* SignIn.swift in Sources */,
+				4BF46F142A3C760700A0250C /* HomeView.swift in Sources */,
 				4B14FC7B2A3C1DFA009E1E2F /* ContentView.swift in Sources */,
-				4B14FC902A3C1F0F009E1E2F /* HomeView.swift in Sources */,
+				4B14FC902A3C1F0F009E1E2F /* OpeningView.swift in Sources */,
 				4B14FC922A3C200F009E1E2F /* Login.swift in Sources */,
+				4B14FCC62A3C6547009E1E2F /* User.swift in Sources */,
 				4B14FC792A3C1DFA009E1E2F /* mobioApp.swift in Sources */,
 				4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */,
 				4B14FC8A2A3C1E43009E1E2F /* UIColor + Ext.swift in Sources */,
