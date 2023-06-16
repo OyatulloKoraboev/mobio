@@ -19,6 +19,7 @@ enum Resources {
     
     enum Images {
         static var logo = UIImage(named: "logo") ?? UIImage()
+        static var whitelogo = UIImage(named: "whitelogo") ?? UIImage()
     }
     
     enum Strings {

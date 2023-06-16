@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0856552A3C82640049FDCD /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0856542A3C82640049FDCD /* SplashView.swift */; };
 		4B14FC792A3C1DFA009E1E2F /* mobioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC782A3C1DFA009E1E2F /* mobioApp.swift */; };
 		4B14FC7B2A3C1DFA009E1E2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FC7A2A3C1DFA009E1E2F /* ContentView.swift */; };
 		4B14FC7D2A3C1DFB009E1E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B14FC7C2A3C1DFB009E1E2F /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0856542A3C82640049FDCD /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		4B14FC752A3C1DFA009E1E2F /* mobio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B14FC782A3C1DFA009E1E2F /* mobioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobioApp.swift; sourceTree = "<group>"; };
 		4B14FC7A2A3C1DFA009E1E2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				4B14FC912A3C200F009E1E2F /* Login.swift */,
 				4B14FC8D2A3C1EBD009E1E2F /* SignIn.swift */,
 				4B14FC8F2A3C1F0F009E1E2F /* OpeningView.swift */,
+				4B0856542A3C82640049FDCD /* SplashView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B14FC882A3C1E2B009E1E2F /* Resources.swift in Sources */,
+				4B0856552A3C82640049FDCD /* SplashView.swift in Sources */,
 				4B14FC8E2A3C1EBD009E1E2F /* SignIn.swift in Sources */,
 				4BF46F142A3C760700A0250C /* HomeView.swift in Sources */,
 				4B14FC7B2A3C1DFA009E1E2F /* ContentView.swift in Sources */,
