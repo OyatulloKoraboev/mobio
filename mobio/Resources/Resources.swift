@@ -12,7 +12,6 @@ enum Resources {
     
     enum Colors {
         static var active = Color("#437BFE")
-        
 //        #E41B4D 100
 //        #EE3D69 100
     }
@@ -27,11 +26,9 @@ enum Resources {
     }
     
     enum Fonts {
-        
         static func Montserrat(size:CGFloat) -> UIFont{
             UIFont(name:"Montserrat-VariableFont_wght",size: size) ?? UIFont()
         }
-        
     }
 }
 

@@ -8,9 +8,30 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var isSideBarOpened:Bool = false
     var body: some View {
-        VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.gray
+            HStack{
+                if isSideBarOpened{
+                    SidebarView()
+                        .transition(.move(edge: .leading))
+                        .animation(.easeInOut)
+                        .frame(width: 266)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            HStack{
+                Spacer()
+                
+                Button {
+                    withAnimation {
+                        isSideBarOpened.toggle()
+                    }
+                } label: {
+                    Text(isSideBarOpened ? "Hide" : "Open")
+                }
+            }
         }
         .navigationBarTitle("Home", displayMode: .inline)
         .navigationBarBackButtonHidden(true)

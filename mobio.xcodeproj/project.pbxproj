@@ -41,6 +41,8 @@
 		4B14FCC02A3C2072009E1E2F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B14FCAA2A3C2072009E1E2F /* README.txt */; };
 		4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */; };
 		4B14FCC62A3C6547009E1E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC52A3C6547009E1E2F /* User.swift */; };
+		4BE8F3572A4014360096E771 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3562A4014360096E771 /* SideBar.swift */; };
+		4BE8F3592A402F510096E771 /* SidebarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3582A402F510096E771 /* SidebarModel.swift */; };
 		4BF46F142A3C760700A0250C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF46F132A3C760700A0250C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		4B14FCC12A3C209B009E1E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Ext.swift"; sourceTree = "<group>"; };
 		4B14FCC52A3C6547009E1E2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4BE8F3562A4014360096E771 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		4BE8F3582A402F510096E771 /* SidebarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarModel.swift; sourceTree = "<group>"; };
 		4BF46F132A3C760700A0250C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,7 @@
 				4B14FC932A3C2072009E1E2F /* Fonts */,
 				4B14FC8C2A3C1EAE009E1E2F /* Auth */,
 				4B14FC862A3C1E1B009E1E2F /* Resources */,
+				4BE8F3562A4014360096E771 /* SideBar.swift */,
 				4BF46F132A3C760700A0250C /* HomeView.swift */,
 				4B14FC782A3C1DFA009E1E2F /* mobioApp.swift */,
 				4B14FC7A2A3C1DFA009E1E2F /* ContentView.swift */,
@@ -198,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				4B14FCC52A3C6547009E1E2F /* User.swift */,
+				4BE8F3582A402F510096E771 /* SidebarModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,9 +307,11 @@
 				4B14FC7B2A3C1DFA009E1E2F /* ContentView.swift in Sources */,
 				4B14FC902A3C1F0F009E1E2F /* OpeningView.swift in Sources */,
 				4B14FC922A3C200F009E1E2F /* Login.swift in Sources */,
+				4BE8F3592A402F510096E771 /* SidebarModel.swift in Sources */,
 				4B14FCC62A3C6547009E1E2F /* User.swift in Sources */,
 				4B14FC792A3C1DFA009E1E2F /* mobioApp.swift in Sources */,
 				4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */,
+				4BE8F3572A4014360096E771 /* SideBar.swift in Sources */,
 				4B14FC8A2A3C1E43009E1E2F /* UIColor + Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,8 +448,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,9 +459,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OyatulloKoraboev.mobio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,8 +483,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,9 +494,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OyatulloKoraboev.mobio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
