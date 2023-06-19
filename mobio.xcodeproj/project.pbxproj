@@ -44,6 +44,8 @@
 		4BE8F3572A4014360096E771 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3562A4014360096E771 /* SideBar.swift */; };
 		4BE8F3592A402F510096E771 /* SidebarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3582A402F510096E771 /* SidebarModel.swift */; };
 		4BF46F142A3C760700A0250C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF46F132A3C760700A0250C /* HomeView.swift */; };
+		C4EED0702A3F52CE0080BE8B /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */; };
+		C4EED0732A400DF10080BE8B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED0722A400DF10080BE8B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		4BE8F3562A4014360096E771 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		4BE8F3582A402F510096E771 /* SidebarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarModel.swift; sourceTree = "<group>"; };
 		4BF46F132A3C760700A0250C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		C4EED0722A400DF10080BE8B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +128,9 @@
 				4B14FC862A3C1E1B009E1E2F /* Resources */,
 				4BE8F3562A4014360096E771 /* SideBar.swift */,
 				4BF46F132A3C760700A0250C /* HomeView.swift */,
+				C4EED06E2A3F52AE0080BE8B /* Tabbar */,
 				4B14FC782A3C1DFA009E1E2F /* mobioApp.swift */,
+				C4EED0712A400DDA0080BE8B /* Settings */,
 				4B14FC7A2A3C1DFA009E1E2F /* ContentView.swift */,
 				4B14FC7C2A3C1DFB009E1E2F /* Assets.xcassets */,
 				4B14FCC12A3C209B009E1E2F /* Info.plist */,
@@ -206,6 +212,22 @@
 				4BE8F3582A402F510096E771 /* SidebarModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C4EED06E2A3F52AE0080BE8B /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C4EED0712A400DDA0080BE8B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C4EED0722A400DF10080BE8B /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +328,7 @@
 				4BF46F142A3C760700A0250C /* HomeView.swift in Sources */,
 				4B14FC7B2A3C1DFA009E1E2F /* ContentView.swift in Sources */,
 				4B14FC902A3C1F0F009E1E2F /* OpeningView.swift in Sources */,
+				C4EED0702A3F52CE0080BE8B /* TabbarView.swift in Sources */,
 				4B14FC922A3C200F009E1E2F /* Login.swift in Sources */,
 				4BE8F3592A402F510096E771 /* SidebarModel.swift in Sources */,
 				4B14FCC62A3C6547009E1E2F /* User.swift in Sources */,
@@ -313,6 +336,7 @@
 				4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */,
 				4BE8F3572A4014360096E771 /* SideBar.swift in Sources */,
 				4B14FC8A2A3C1E43009E1E2F /* UIColor + Ext.swift in Sources */,
+				C4EED0732A400DF10080BE8B /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobio/Preview Content\"";
-				DEVELOPMENT_TEAM = A3UX4GX4C6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mobio/Info.plist;
@@ -476,7 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobio/Preview Content\"";
-				DEVELOPMENT_TEAM = A3UX4GX4C6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mobio/Info.plist;
