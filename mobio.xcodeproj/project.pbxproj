@@ -42,6 +42,8 @@
 		4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */; };
 		4B14FCC62A3C6547009E1E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC52A3C6547009E1E2F /* User.swift */; };
 		4BF46F142A3C760700A0250C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF46F132A3C760700A0250C /* HomeView.swift */; };
+		C4DFB3442A4060EC006B9EA3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFB3432A4060EC006B9EA3 /* CardView.swift */; };
+		C4DFB3462A4072E0006B9EA3 /* CardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFB3452A4072E0006B9EA3 /* CardSection.swift */; };
 		C4EED0702A3F52CE0080BE8B /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */; };
 		C4EED0732A400DF10080BE8B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED0722A400DF10080BE8B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Ext.swift"; sourceTree = "<group>"; };
 		4B14FCC52A3C6547009E1E2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BF46F132A3C760700A0250C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C4DFB3432A4060EC006B9EA3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = ../../../../../Documents/CardView.swift; sourceTree = "<group>"; };
+		C4DFB3452A4072E0006B9EA3 /* CardSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSection.swift; path = ../../../../../Documents/CardSection.swift; sourceTree = "<group>"; };
 		C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		C4EED0722A400DF10080BE8B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 				4B14FC782A3C1DFA009E1E2F /* mobioApp.swift */,
 				C4EED0712A400DDA0080BE8B /* Settings */,
 				4B14FC7A2A3C1DFA009E1E2F /* ContentView.swift */,
+				C4DFB3422A4060B9006B9EA3 /* Cards */,
 				4B14FC7C2A3C1DFB009E1E2F /* Assets.xcassets */,
 				4B14FCC12A3C209B009E1E2F /* Info.plist */,
 				4B14FC7E2A3C1DFB009E1E2F /* Preview Content */,
@@ -206,6 +211,15 @@
 				4B14FCC52A3C6547009E1E2F /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C4DFB3422A4060B9006B9EA3 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				C4DFB3432A4060EC006B9EA3 /* CardView.swift */,
+				C4DFB3452A4072E0006B9EA3 /* CardSection.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		C4EED06E2A3F52AE0080BE8B /* Tabbar */ = {
@@ -316,8 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DFB3442A4060EC006B9EA3 /* CardView.swift in Sources */,
 				4B14FC882A3C1E2B009E1E2F /* Resources.swift in Sources */,
 				4B0856552A3C82640049FDCD /* SplashView.swift in Sources */,
+				C4DFB3462A4072E0006B9EA3 /* CardSection.swift in Sources */,
 				4B14FC8E2A3C1EBD009E1E2F /* SignIn.swift in Sources */,
 				4BF46F142A3C760700A0250C /* HomeView.swift in Sources */,
 				4B14FC7B2A3C1DFA009E1E2F /* ContentView.swift in Sources */,
