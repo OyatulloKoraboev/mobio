@@ -73,7 +73,7 @@ struct SidebarView: View {
                 }
                 Spacer()
             }.padding(EdgeInsets(top: 60, leading: 10, bottom: 0, trailing: 0))
-        }.ignoresSafeArea()
+        }
     }
     
     
