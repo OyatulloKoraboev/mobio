@@ -29,28 +29,28 @@ struct HomeView: View {
             NavigationView {
                 ZStack {
                     VStack{
-                        switch currentSection {
-                        case .home:
-                            Text("Welcome to home")
-                        case .search:
-                            Text("Welcome to Search")
-                        case .basket:
-                            Text("Welcome to Basket")
-                        case .glavnieOkno:
-                            Text("Welcome to glavnieOkno")
-                        case .departments:
-                            Text("Welcome to departments")
-                        case .izobrajenie:
-                            Text("Welcome to izobrajenie")
-                        case .voprosi:
-                            Text("Welcome to voprosi")
-                        case .vetvi:
-                            Text("Welcome to vetvi")
-                        case .nastroyki:
-                            Text("Welcome to nastroyki")
-                        }
-//                        GridCircleView()
+//                        switch currentSection {
+//                        case .home:
+//                            Text("Welcome to home")
+//                        case .search:
+//                            Text("Welcome to Search")
+//                        case .basket:
+//                            Text("Welcome to Basket")
+//                        case .glavnieOkno:
+//                            Text("Welcome to glavnieOkno")
+//                        case .departments:
+//                            Text("Welcome to departments")
+//                        case .izobrajenie:
+//                            Text("Welcome to izobrajenie")
+//                        case .voprosi:
+//                            Text("Welcome to voprosi")
+//                        case .vetvi:
+//                            Text("Welcome to vetvi")
+//                        case .nastroyki:
+//                            Text("Welcome to nastroyki")
+//                        }
                         
+                        CircleGridView()
                     }
                     TabbarView(selectedSection: $currentSection)
                         .background(Color.white)
