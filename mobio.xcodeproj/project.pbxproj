@@ -50,7 +50,7 @@
 		C45A67CB2A418B5D00B87D52 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A67CA2A418B5D00B87D52 /* TokenModel.swift */; };
 		C45A67CD2A418B6E00B87D52 /* NertworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A67CC2A418B6E00B87D52 /* NertworkManager.swift */; };
 		C45A67D02A418B9A00B87D52 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C45A67CF2A418B9A00B87D52 /* Alamofire */; };
-		C45A67D32A419D1300B87D52 /* Veil in Frameworks */ = {isa = PBXBuildFile; productRef = C45A67D22A419D1300B87D52 /* Veil */; };
+		C45A67D72A41C78800B87D52 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = C45A67D62A41C78800B87D52 /* InputMask */; };
 		C4EED0702A3F52CE0080BE8B /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */; };
 		C4EED0732A400DF10080BE8B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED0722A400DF10080BE8B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -109,8 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C45A67D32A419D1300B87D52 /* Veil in Frameworks */,
 				C45A67D02A418B9A00B87D52 /* Alamofire in Frameworks */,
+				C45A67D72A41C78800B87D52 /* InputMask in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +291,7 @@
 			name = mobio;
 			packageProductDependencies = (
 				C45A67CF2A418B9A00B87D52 /* Alamofire */,
-				C45A67D22A419D1300B87D52 /* Veil */,
+				C45A67D62A41C78800B87D52 /* InputMask */,
 			);
 			productName = mobio;
 			productReference = 4B14FC752A3C1DFA009E1E2F /* mobio.app */;
@@ -323,7 +323,7 @@
 			mainGroup = 4B14FC6C2A3C1DFA009E1E2F;
 			packageReferences = (
 				C45A67CE2A418B9A00B87D52 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C45A67D12A419D1300B87D52 /* XCRemoteSwiftPackageReference "Veil" */,
+				C45A67D52A41C78800B87D52 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
 			);
 			productRefGroup = 4B14FC762A3C1DFA009E1E2F /* Products */;
 			projectDirPath = "";
@@ -615,12 +615,12 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		C45A67D12A419D1300B87D52 /* XCRemoteSwiftPackageReference "Veil" */ = {
+		C45A67D52A41C78800B87D52 /* XCRemoteSwiftPackageReference "input-mask-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/DanielCardonaRojas/Veil";
+			repositoryURL = "https://github.com/RedMadRobot/input-mask-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
+				minimumVersion = 7.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -631,10 +631,10 @@
 			package = C45A67CE2A418B9A00B87D52 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		C45A67D22A419D1300B87D52 /* Veil */ = {
+		C45A67D62A41C78800B87D52 /* InputMask */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C45A67D12A419D1300B87D52 /* XCRemoteSwiftPackageReference "Veil" */;
-			productName = Veil;
+			package = C45A67D52A41C78800B87D52 /* XCRemoteSwiftPackageReference "input-mask-ios" */;
+			productName = InputMask;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

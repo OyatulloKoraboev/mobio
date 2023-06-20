@@ -14,7 +14,7 @@ class NetworkManager {
         let url = "https://dev.mobio.uz/api/login"
 
         let parameters: [String: Any] = [
-            "phone": phoneNum.dropFirst(),
+            "phone": "998\(phoneNum)",
             "password": password
         ]
 

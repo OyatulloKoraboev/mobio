@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Veil
+import InputMask
 
 struct Login: View {
     @EnvironmentObject var profile: Profile
@@ -16,6 +16,9 @@ struct Login: View {
     @State private var wrongUsername = 0
     @State private var wrongPassword = 0
     @State var loggedIn:Bool = false
+    @State var nice: Bool = true
+    @State var phoneNumber: String = ""
+
     
     let service = NetworkManager()
     let tokenService = UserDefaultsManager()
@@ -25,13 +28,36 @@ struct Login: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 15) {
-            ExtractedView(text: $username, title: "Номер телефона")
-                .onChange(of: username) { newValue in
-                    let dateMask = Veil(pattern: "+998#########")
-                    let result = dateMask.mask(input: newValue)
-                    username = result
-                    print(username.count)
-                }
+            
+            VStack(alignment:.leading) {
+                Text("Номер телефона")
+                    .font(.montserratRegular(size:10))
+                    .foregroundColor(Color(hex: "#AEAEAE"))
+                MaskedTextField(
+                    text: $username,
+                    value: $phoneNumber,
+                    complete: $nice,
+                    placeholder: "+998",
+                    primaryMaskFormat: "+998 ([00]) [000]-[00]-[00]"
+                )
+                    .frame(height: 40)
+                    .padding(.top, -8)
+                    .overlay(
+                        ZStack {
+                            GeometryReader { geometry in
+                                Rectangle()
+                                    .fill(Color(hex: "#AEAEAE"))
+                                    .frame(height: 3)
+                                    .frame(width: geometry.size.width)
+                                    .offset(y: 35)
+                                    .opacity(0.3)
+                        }
+                    }
+                )
+            }
+            .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+
+            
             ExtractedView(text: $passwordText, title: "Пароль")
             
             Button {
@@ -45,7 +71,7 @@ struct Login: View {
             Spacer()
             
             Button {
-                authenticateUser(username: username, password: passwordText)
+                authenticateUser(username: phoneNumber, password: passwordText)
                 
             } label: {
                 Text("Авторизация")
@@ -67,6 +93,7 @@ struct Login: View {
     }
     
     func authenticateUser(username: String, password: String){
+        print(username, password, "salom")
 //        if username.lowercased() == "abc" {
 //            wrongUsername = 0
 //            if password.lowercased() == "123"{

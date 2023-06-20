@@ -10,12 +10,12 @@
       }
     },
     {
-      "identity" : "veil",
+      "identity" : "input-mask-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/DanielCardonaRojas/Veil",
+      "location" : "https://github.com/RedMadRobot/input-mask-ios",
       "state" : {
-        "revision" : "967a2f103972ce5043e28f1920330ee934bcbadc",
-        "version" : "0.2.0"
+        "revision" : "7429d5aef70544ce00cabebcf1d2dde7681cec4f",
+        "version" : "7.2.8"
       }
     }
   ],
