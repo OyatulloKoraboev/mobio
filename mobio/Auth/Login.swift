@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct Login: View {
+    @EnvironmentObject var profile: Profile
+
     @State var username: String = ""
     @State var passwordText: String = ""
     @State private var wrongUsername = 0
     @State private var wrongPassword = 0
     @State var loggedIn:Bool = false
+    
+    let service = NetworkManager()
+    let tokenService = UserDefaultsManager()
     
     @State private var showingLoginScreen = false
     
@@ -55,19 +60,28 @@ struct Login: View {
     }
     
     func authenticateUser(username: String, password: String){
-        if username.lowercased() == "abc" {
-            wrongUsername = 0
-            if password.lowercased() == "123"{
-                wrongPassword = 0
-                
-                loggedIn = true
+//        if username.lowercased() == "abc" {
+//            wrongUsername = 0
+//            if password.lowercased() == "123"{
+//                wrongPassword = 0
+//
+//                loggedIn = true
+//            }
+//            else{
+//                wrongPassword = 2
+//            }
+//        }
+//        else{
+//            wrongUsername = 2
+//        }
+        service.performRequest(phoneNum: username, password: password) { response in
+            switch response {
+            case .success(let token):
+                tokenService.saveToken(token: token)
+                profile.isLoggedIn = true
+            case .failure(let error):
+                print(error)
             }
-            else{
-                wrongPassword = 2
-            }
-        }
-        else{
-            wrongUsername = 2
         }
     }
     

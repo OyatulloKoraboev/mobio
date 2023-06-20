@@ -11,7 +11,12 @@ import SwiftUI
 struct mobioApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            ContentView()
+                .environmentObject(Profile())
         }
     }
+}
+
+class Profile: ObservableObject {
+    @Published var isLoggedIn = false
 }

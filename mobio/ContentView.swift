@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var profile: Profile
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            if UserDefaults.standard.string(forKey: UserDefaultsManager.Token.access_token.rawValue) != nil || profile.isLoggedIn {
+                HomeView()
+            } else {
+                OpeningView()
+            }
         }
-        .padding()
     }
 }
 

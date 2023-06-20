@@ -12,7 +12,6 @@ struct SidebarView: View {
         SidebarModel(title: "Вопросы", icon: "questionmark.bubble"),
         SidebarModel(title: "Ветви", icon: "square.split.2x2.fill"),
         SidebarModel(title: "Настройки", icon: "gearshape"),
-        
     ]
     @State private var isSideBarOpened:Bool = false
     @State var isAnimation:Bool = true
