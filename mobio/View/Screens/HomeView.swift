@@ -36,7 +36,7 @@ struct HomeView: View {
                                     .frame(maxHeight: .infinity,alignment:.top)
                                     .padding(.top,100)
                                 MainHomeView()
-
+                                VerticalCardListView()
                             }
                         case .search:
                             Text("Welcome to Search")
@@ -48,7 +48,7 @@ struct HomeView: View {
                                     .frame(maxHeight: .infinity,alignment:.top)
                                     .padding(.top,100)
                                 MainHomeView()
-
+                                VerticalCardListView()
                             }
                         case .departments:
                             Text("Welcome to departments")
@@ -62,8 +62,8 @@ struct HomeView: View {
                             Text("Welcome to nastroyki")
                         }
                         
-                       
-                            
+                        
+                        
                     }
                     TabbarView(selectedSection: $currentSection)
                         .background(Color.white)
@@ -108,11 +108,11 @@ struct HomeView: View {
 }
 
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct Home_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
 
 
 struct MainHomeView: View {
@@ -174,7 +174,7 @@ struct MainCardView: View {
                                     .foregroundColor(.gray)
                             }
                         }
-
+                        
                         Button {
                             print("Cart button tapped")
                         } label: {
@@ -221,10 +221,82 @@ struct MainCardView: View {
             }
             
         }
-
+        
         .frame(width: 240, height: 300)
         .background(.white)
         .cornerRadius(10)
         .shadow(radius: 3)
+    }
+}
+
+
+struct VerticalCardListView: View {
+    var body: some View {
+        ScrollView {
+
+        VStack {
+            HStack {
+                Text("Наушники")
+                    .font(.title3)
+                Spacer()
+                Text("Увидеть все")
+                    .foregroundColor(.red)
+                Image("Arrow")
+            }
+            .bold()
+            
+                ForEach(0..<5, id: \.self) { item in
+                    VerticalCardView()
+                }
+            }
+            
+            
+        .padding()
+        .background(.white)
+            
+        .cornerRadius(8)
+        .padding()
+        .shadow(color: .red.opacity(0.3), radius: 4)
+            VStack {
+                
+            }.frame(height: 70)
+        }
+        .edgesIgnoringSafeArea(.bottom)
+    }
+}
+
+
+struct VerticalCardView: View {
+    var body: some View {
+        HStack(spacing: 16) {
+            Rectangle()
+                .frame(width: 80, height: 80)
+                .cornerRadius(8)
+                .foregroundColor(Color.gray.opacity(0.6))
+            
+            VStack(alignment: .leading, spacing: -3) {
+                Text("Беспроводные наушники Airpods 115 copy")
+                HStack(spacing: 15) {
+                    Text("80 000 сум")
+                        .foregroundColor(.red)
+                    HStack(spacing: 5) {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                        Text("3,00")
+                    }
+                    .padding(7)
+                }
+                Text("3 Комментарий")
+            }
+            .font(.system(size: 16))
+            Spacer()
+        }
+    }
+}
+
+
+struct VerticalCardListView_Previews: PreviewProvider {
+    static var previews: some View {
+        VerticalCardListView()
     }
 }
