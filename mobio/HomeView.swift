@@ -12,39 +12,51 @@ struct HomeView: View {
     @State private var currentSection:Section = .home
     
     var body: some View {
-        ZStack {
-            Color.gray.opacity(isSideBarOpened ? 1 : 0.2).animation(.easeOut)
-            VStack{
-                Spacer()
-                
-                
-                Button {
-                    isSideBarOpened.toggle()
-                } label: {
-                    Text(isSideBarOpened ? "Open" : "Close")
+        NavigationView {
+            
+            ZStack {
+                Color.gray.opacity(isSideBarOpened ? 1 : 0.2).animation(.easeOut)
+                VStack {
+                    switch currentSection {
+                    case .home:
+                        Text("Welcome to home")
+                    case .search:
+                        Text("Welcome to Search")
+                    case .basket:
+                        Text("Welcome to Basket")
+                    case .glavnieOkno:
+                        Text("Welcome to glavnieOkno")
+                    case .departments:
+                        Text("Welcome to departments")
+                    case .izobrajenie:
+                        Text("Welcome to izobrajenie")
+                    case .voprosi:
+                        Text("Welcome to voprosi")
+                    case .vetvi:
+                        Text("Welcome to vetvi")
+                    case .nastroyki:
+                        Text("Welcome to nastroyki")
+                    }
                 }
-                .frame(maxWidth: .infinity,alignment: .trailing)
-                .padding(.trailing,20)
-                
-                Spacer()
-                
-                   
-                    
+                TabbarView(selectedSection: $currentSection)
+                    .frame(maxHeight: .infinity,alignment: .bottom)
+                if isSideBarOpened {
+                    SidebarView(selectedSection: $currentSection)
+                        .transition(.move(edge: .leading))
+                        .animation(.easeInOut)
+                        .frame(width: 266)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .zIndex(1) // Set a higher z-index for the SidebarView
+                }
             }
-            TabbarView(selectedSection: $currentSection)
-                .frame(maxHeight: .infinity,alignment: .bottom)
-            if isSideBarOpened {
-                SidebarView()
-                    .transition(.move(edge: .leading))
-                    .animation(.easeInOut)
-                    .frame(width: 266)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .zIndex(1) // Set a higher z-index for the SidebarView
-            }
+            .ignoresSafeArea()
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                isSideBarOpened.toggle()
+            }) {
+                Image(systemName: "list.bullet")
+            })
         }
-        .ignoresSafeArea()
-        .navigationBarTitle("Home", displayMode: .inline)
-        .navigationBarHidden(true)
     }
 }
 

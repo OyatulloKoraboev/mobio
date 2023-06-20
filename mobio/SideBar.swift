@@ -3,6 +3,8 @@
 import SwiftUI
 
 struct SidebarView: View {
+    @Binding var selectedSection: Section
+
     let sideBarMenu:[SidebarModel] = [
         SidebarModel(title: "Главное окно", icon: "house"),
         SidebarModel(title: "Департаменты", icon: "square.split.2x2.fill"),
@@ -56,6 +58,22 @@ struct SidebarView: View {
 //                }
                 ForEach(sideBarMenu,id: \.self){ item in
                     Button {
+                        switch item.title {
+                        case "Главное окно":
+                            selectedSection = .glavnieOkno
+                        case "Департаменты":
+                            selectedSection = .departments
+                        case "Избранное":
+                            selectedSection = .izobrajenie
+                        case "Вопросы":
+                            selectedSection = .voprosi
+                        case "Ветви":
+                            selectedSection = .vetvi
+                        case "Настройки":
+                            selectedSection = .nastroyki
+                        default:
+                            break
+                        }
                     } label: {
                         HStack{
                             ZStack{
@@ -72,14 +90,15 @@ struct SidebarView: View {
                     }
                 }
                 Spacer()
-            }.padding(EdgeInsets(top: 60, leading: 10, bottom: 0, trailing: 0))
+            }.padding(EdgeInsets(top: 120, leading: 10, bottom: 0, trailing: 0))
         }
     }
-    
-    
-    struct SidebarView_Previews: PreviewProvider {
-        static var previews: some View {
-            SidebarView()
-        }
-    }
+
 }
+
+
+//struct SidebarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SidebarView()
+//    }
+//}

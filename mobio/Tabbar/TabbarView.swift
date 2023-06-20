@@ -11,6 +11,12 @@ enum Section {
     case search
     case home
     case basket
+    case glavnieOkno
+    case departments
+    case izobrajenie
+    case voprosi
+    case vetvi
+    case nastroyki
 }
 
 struct TestView: View {
