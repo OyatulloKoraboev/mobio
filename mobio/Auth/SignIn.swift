@@ -57,7 +57,7 @@ struct ExtractedView: View {
             Text(title)
                 .font(.montserratRegular(size:10))
                 .foregroundColor(Color(hex: "#AEAEAE"))
-            TextField("", text: $text)
+            TextField(title == "Номер телефона" ? "+998" : "", text: $text)
                 .frame(height: 40)
                 .padding(.top, -8)
                 .overlay(

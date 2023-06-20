@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Veil
 
 struct Login: View {
     @EnvironmentObject var profile: Profile
@@ -25,6 +26,12 @@ struct Login: View {
         
         VStack(alignment: .leading, spacing: 15) {
             ExtractedView(text: $username, title: "Номер телефона")
+                .onChange(of: username) { newValue in
+                    let dateMask = Veil(pattern: "+998#########")
+                    let result = dateMask.mask(input: newValue)
+                    username = result
+                    print(username.count)
+                }
             ExtractedView(text: $passwordText, title: "Пароль")
             
             Button {
