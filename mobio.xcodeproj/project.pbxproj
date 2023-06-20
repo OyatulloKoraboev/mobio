@@ -134,7 +134,6 @@
 			children = (
 				C45A67C62A418B2D00B87D52 /* Services */,
 				4B14FCC42A3C6536009E1E2F /* Models */,
-				4B14FC932A3C2072009E1E2F /* Fonts */,
 				4B14FC8C2A3C1EAE009E1E2F /* Auth */,
 				4B14FC862A3C1E1B009E1E2F /* Resources */,
 				4BE8F3562A4014360096E771 /* SideBar.swift */,
@@ -161,6 +160,7 @@
 		4B14FC862A3C1E1B009E1E2F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B14FC932A3C2072009E1E2F /* Fonts */,
 				4B14FC872A3C1E2B009E1E2F /* Resources.swift */,
 				4B14FC892A3C1E43009E1E2F /* UIColor + Ext.swift */,
 				4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */,

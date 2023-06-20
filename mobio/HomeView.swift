@@ -12,7 +12,7 @@ struct HomeView: View {
     
     @EnvironmentObject var profile: Profile
     let tokenService = UserDefaultsManager()
-
+    
     var body: some View {
         ZStack {
             Color.gray
@@ -49,7 +49,7 @@ struct HomeView: View {
                         case .nastroyki:
                             Text("Welcome to nastroyki")
                         }
-                        //                        GridCircleView()
+//                        GridCircleView()
                         
                     }
                     TabbarView(selectedSection: $currentSection)
