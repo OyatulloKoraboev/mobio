@@ -11,47 +11,11 @@ struct HomeView: View {
     @State private var currentSection: Section = .home
     
     var body: some View {
-        NavigationView {
-            
-            ZStack {
-                Color.gray.opacity(isSideBarOpened ? 1 : 0.2).animation(.easeOut)
-                VStack {
-                    switch currentSection {
-                    case .home:
-                        Text("Welcome to home")
-                    case .search:
-                        Text("Welcome to Search")
-                    case .basket:
-                        Text("Welcome to Basket")
-                    case .glavnieOkno:
-                        Text("Welcome to glavnieOkno")
-                    case .departments:
-                        Text("Welcome to departments")
-                    case .izobrajenie:
-                        Text("Welcome to izobrajenie")
-                    case .voprosi:
-                        Text("Welcome to voprosi")
-                    case .vetvi:
-                        Text("Welcome to vetvi")
-                    case .nastroyki:
-                        Text("Welcome to nastroyki")
-                    }
-                }
-                TabbarView(selectedSection: $currentSection)
-                    .frame(maxHeight: .infinity,alignment: .bottom)
-                if isSideBarOpened {
-                    SidebarView(selectedSection: $currentSection)
-                        .transition(.move(edge: .leading))
-                        .animation(.easeInOut)
-                        .frame(width: 266)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .zIndex(1) // Set a higher z-index for the SidebarView
-                }
         ZStack {
             Color.gray
                 .edgesIgnoringSafeArea(.all)
             if isSideBarOpened {
-                Color.black.opacity(0.1)
+                Color.black.opacity(0.45)
                     .ignoresSafeArea()
                     .onTapGesture {
                         isSideBarOpened.toggle()
@@ -60,8 +24,31 @@ struct HomeView: View {
             }
             
             NavigationView {
-                VStack {
-                    Spacer()
+                ZStack {
+                    VStack{
+                        switch currentSection {
+                        case .home:
+                            Text("Welcome to home")
+                        case .search:
+                            Text("Welcome to Search")
+                        case .basket:
+                            Text("Welcome to Basket")
+                        case .glavnieOkno:
+                            Text("Welcome to glavnieOkno")
+                        case .departments:
+                            Text("Welcome to departments")
+                        case .izobrajenie:
+                            Text("Welcome to izobrajenie")
+                        case .voprosi:
+                            Text("Welcome to voprosi")
+                        case .vetvi:
+                            Text("Welcome to vetvi")
+                        case .nastroyki:
+                            Text("Welcome to nastroyki")
+                    }
+//                        GridCircleView()
+                        
+                    }
                     TabbarView(selectedSection: $currentSection)
                         .background(Color.white)
                         .frame(maxHeight: .infinity, alignment: .bottom)
@@ -78,11 +65,11 @@ struct HomeView: View {
                     }
                 )
             }
-            .opacity(isSideBarOpened ? 0.4 : 1)
+            .opacity(isSideBarOpened ? 0.8 : 1)
             .disabled(isSideBarOpened)
             
             if isSideBarOpened {
-                SidebarView()
+                SidebarView(selectedSection: $currentSection)
                     .ignoresSafeArea()
                     .transition(.move(edge: .leading))
                     .animation(.easeInOut)
@@ -90,13 +77,6 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .zIndex(2)
             }
-            .ignoresSafeArea()
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {
-                isSideBarOpened.toggle()
-            }) {
-                Image(systemName: "list.bullet")
-            })
         }
     }
 }
