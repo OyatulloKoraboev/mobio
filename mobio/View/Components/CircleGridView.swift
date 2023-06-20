@@ -21,25 +21,44 @@ struct CircleGridView: View {
     ]
     
     var body: some View {
-        ScrollView(.horizontal,showsIndicators: false){
-            HStack(spacing: 20){
-                ForEach(data, id: \.self){ item in
-                    VStack{
-                        Image(item.image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                        Text(item.title)
-                        
-                            .font(.montserratRegular(size:12))
-                            .lineLimit(1)
-                            .truncationMode(.tail)
-                            .frame(width: 60)
-                        
+        VStack{
+            HStack{
+                Text("Департаменты")
+                    .bold()
+                Spacer()
+                Button(action: {
+                    print("Увидить все  >")
+                }, label: {
+                    Text("Увидить все  >")
+                        .foregroundColor(.pink)
+                        .font(.callout)
+                })
+                
+            }
+            .frame(maxWidth: .infinity,alignment: .leading)
+            .padding(20)
+            ScrollView(.horizontal,showsIndicators: false){
+                HStack(spacing: 10){
+                    Spacer()
+                    ForEach(data, id: \.self){ item in
+                        VStack{
+                            Image(item.image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                            Text(item.title)
+                            
+                                .font(.montserratRegular(size:12))
+                                .lineLimit(1)
+                                .truncationMode(.tail)
+                                .frame(width: 60)
+                            
+                        }
                     }
                 }
             }
+            
         }
     }
 }
