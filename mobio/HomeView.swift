@@ -6,47 +6,58 @@
 //
 
 import SwiftUI
-
 struct HomeView: View {
-    @State private var isSideBarOpened:Bool = false
-    @State private var currentSection:Section = .home
+    @State private var isSideBarOpened: Bool = false
+    @State private var currentSection: Section = .home
     
     var body: some View {
         ZStack {
-            Color.gray.opacity(isSideBarOpened ? 1 : 0.2).animation(.easeOut)
-            VStack{
-                Spacer()
-                
-                
-                Button {
-                    isSideBarOpened.toggle()
-                } label: {
-                    Text(isSideBarOpened ? "Open" : "Close")
-                }
-                .frame(maxWidth: .infinity,alignment: .trailing)
-                .padding(.trailing,20)
-                
-                Spacer()
-                
-                   
-                    
+            Color.gray
+                .edgesIgnoringSafeArea(.all)
+            if isSideBarOpened {
+                Color.black.opacity(0.1)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        isSideBarOpened.toggle()
+                    }
+                    .zIndex(1)
             }
-            TabbarView(selectedSection: $currentSection)
-                .frame(maxHeight: .infinity,alignment: .bottom)
+            
+            NavigationView {
+                VStack {
+                    Spacer()
+                    TabbarView(selectedSection: $currentSection)
+                        .background(Color.white)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                }
+                .ignoresSafeArea()
+                .background(Color.gray.opacity(0.05))
+                .navigationBarTitle("Home", displayMode: .inline)
+                .navigationBarItems(
+                    leading: Button(action: {
+                        isSideBarOpened.toggle()
+                    }) {
+                        Image(systemName: "gearshape")
+                            .foregroundColor(Color.pink)
+                    }
+                )
+            }
+            .opacity(isSideBarOpened ? 0.4 : 1)
+            .disabled(isSideBarOpened)
+            
             if isSideBarOpened {
                 SidebarView()
+                    .ignoresSafeArea()
                     .transition(.move(edge: .leading))
                     .animation(.easeInOut)
                     .frame(width: 266)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .zIndex(1) // Set a higher z-index for the SidebarView
+                    .zIndex(2)
             }
         }
-        .ignoresSafeArea()
-        .navigationBarTitle("Home", displayMode: .inline)
-        .navigationBarHidden(true)
     }
 }
+
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
