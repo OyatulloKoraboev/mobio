@@ -41,6 +41,8 @@
 		4B14FCC02A3C2072009E1E2F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B14FCAA2A3C2072009E1E2F /* README.txt */; };
 		4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */; };
 		4B14FCC62A3C6547009E1E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14FCC52A3C6547009E1E2F /* User.swift */; };
+		4BB2795F2A41A67E00BE6302 /* CircleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2795E2A41A67E00BE6302 /* CircleGridView.swift */; };
+		4BB279612A41A72800BE6302 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB279602A41A72800BE6302 /* Product.swift */; };
 		4BE8F3572A4014360096E771 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3562A4014360096E771 /* SideBar.swift */; };
 		4BE8F3592A402F510096E771 /* SidebarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3582A402F510096E771 /* SidebarModel.swift */; };
 		4BF46F142A3C760700A0250C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF46F132A3C760700A0250C /* HomeView.swift */; };
@@ -90,6 +92,8 @@
 		4B14FCC12A3C209B009E1E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Ext.swift"; sourceTree = "<group>"; };
 		4B14FCC52A3C6547009E1E2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4BB2795E2A41A67E00BE6302 /* CircleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGridView.swift; sourceTree = "<group>"; };
+		4BB279602A41A72800BE6302 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4BE8F3562A4014360096E771 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		4BE8F3582A402F510096E771 /* SidebarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarModel.swift; sourceTree = "<group>"; };
 		4BF46F132A3C760700A0250C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -132,16 +136,11 @@
 		4B14FC772A3C1DFA009E1E2F /* mobio */ = {
 			isa = PBXGroup;
 			children = (
+				4BB2795B2A41A61300BE6302 /* View */,
 				C45A67C62A418B2D00B87D52 /* Services */,
 				4B14FCC42A3C6536009E1E2F /* Models */,
-				4B14FC932A3C2072009E1E2F /* Fonts */,
-				4B14FC8C2A3C1EAE009E1E2F /* Auth */,
 				4B14FC862A3C1E1B009E1E2F /* Resources */,
-				4BE8F3562A4014360096E771 /* SideBar.swift */,
-				4BF46F132A3C760700A0250C /* HomeView.swift */,
-				C4EED06E2A3F52AE0080BE8B /* Tabbar */,
 				4B14FC782A3C1DFA009E1E2F /* mobioApp.swift */,
-				C4EED0712A400DDA0080BE8B /* Settings */,
 				4B14FC7A2A3C1DFA009E1E2F /* ContentView.swift */,
 				4B14FC7C2A3C1DFB009E1E2F /* Assets.xcassets */,
 				4B14FCC12A3C209B009E1E2F /* Info.plist */,
@@ -161,6 +160,7 @@
 		4B14FC862A3C1E1B009E1E2F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B14FC932A3C2072009E1E2F /* Fonts */,
 				4B14FC872A3C1E2B009E1E2F /* Resources.swift */,
 				4B14FC892A3C1E43009E1E2F /* UIColor + Ext.swift */,
 				4B14FCC22A3C2839009E1E2F /* Font + Ext.swift */,
@@ -221,8 +221,38 @@
 			children = (
 				4B14FCC52A3C6547009E1E2F /* User.swift */,
 				4BE8F3582A402F510096E771 /* SidebarModel.swift */,
+				4BB279602A41A72800BE6302 /* Product.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4BB2795B2A41A61300BE6302 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B14FC8C2A3C1EAE009E1E2F /* Auth */,
+				4BB2795D2A41A62500BE6302 /* Components */,
+				C4EED06E2A3F52AE0080BE8B /* Tabbar */,
+				4BB2795C2A41A61A00BE6302 /* Screens */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BB2795C2A41A61A00BE6302 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C4EED0722A400DF10080BE8B /* SettingsView.swift */,
+				4BF46F132A3C760700A0250C /* HomeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4BB2795D2A41A62500BE6302 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8F3562A4014360096E771 /* SideBar.swift */,
+				4BB2795E2A41A67E00BE6302 /* CircleGridView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C45A67C62A418B2D00B87D52 /* Services */ = {
@@ -241,14 +271,6 @@
 				C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */,
 			);
 			path = Tabbar;
-			sourceTree = "<group>";
-		};
-		C4EED0712A400DDA0080BE8B /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				C4EED0722A400DF10080BE8B /* SettingsView.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,10 +385,12 @@
 				4BE8F3592A402F510096E771 /* SidebarModel.swift in Sources */,
 				4B14FCC62A3C6547009E1E2F /* User.swift in Sources */,
 				C45A67CB2A418B5D00B87D52 /* TokenModel.swift in Sources */,
+				4BB2795F2A41A67E00BE6302 /* CircleGridView.swift in Sources */,
 				4B14FC792A3C1DFA009E1E2F /* mobioApp.swift in Sources */,
 				4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */,
 				4BE8F3572A4014360096E771 /* SideBar.swift in Sources */,
 				4B14FC8A2A3C1E43009E1E2F /* UIColor + Ext.swift in Sources */,
+				4BB279612A41A72800BE6302 /* Product.swift in Sources */,
 				C4EED0732A400DF10080BE8B /* SettingsView.swift in Sources */,
 				C45A67CD2A418B6E00B87D52 /* NertworkManager.swift in Sources */,
 			);

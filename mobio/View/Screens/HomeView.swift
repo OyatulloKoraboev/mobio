@@ -49,8 +49,11 @@ struct HomeView: View {
                         case .nastroyki:
                             Text("Welcome to nastroyki")
                         }
-                        //                        GridCircleView()
                         
+                        CircleGridView()
+                            .frame(maxHeight: .infinity,alignment:.top)
+                            .padding(.top,100)
+                            
                     }
                     TabbarView(selectedSection: $currentSection)
                         .background(Color.white)
