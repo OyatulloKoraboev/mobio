@@ -80,7 +80,6 @@ struct TabbarView: View {
             }
             .padding(.top, 20)
             .padding(.bottom, 30)
-            .background(.white)
             .cornerRadius(25)
             .shadow(radius: 4)
 
