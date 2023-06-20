@@ -28,16 +28,28 @@ struct HomeView: View {
             
             NavigationView {
                 ZStack {
-                    VStack{
+                    VStack {
                         switch currentSection {
                         case .home:
-                            MainHomeView()
+                            ScrollView {
+                                CircleGridView()
+                                    .frame(maxHeight: .infinity,alignment:.top)
+                                    .padding(.top,100)
+                                MainHomeView()
+
+                            }
                         case .search:
                             Text("Welcome to Search")
                         case .basket:
                             Text("Welcome to Basket")
                         case .glavnieOkno:
-                            Text("Welcome to glavnieOkno")
+                            ScrollView {
+                                CircleGridView()
+                                    .frame(maxHeight: .infinity,alignment:.top)
+                                    .padding(.top,100)
+                                MainHomeView()
+
+                            }
                         case .departments:
                             Text("Welcome to departments")
                         case .izobrajenie:
@@ -50,9 +62,7 @@ struct HomeView: View {
                             Text("Welcome to nastroyki")
                         }
                         
-                        CircleGridView()
-                            .frame(maxHeight: .infinity,alignment:.top)
-                            .padding(.top,100)
+                       
                             
                     }
                     TabbarView(selectedSection: $currentSection)
