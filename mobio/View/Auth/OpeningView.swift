@@ -87,8 +87,8 @@ struct OpeningView: View {
                         .tabItem {
                         }.tag(1)
                 }
-                .tabViewStyle(PageTabViewStyle())
-                
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+
             }
             
             CircularLoadingView(isShowing: $showProgressView, content: {

@@ -1,13 +1,13 @@
+////
+////  Test.swift
+////  mobio
+////
+////  Created by Zekhniddin Jumaev on 21/06/23.
+////
 //
-//  Test.swift
-//  mobio
+//import SwiftUI
 //
-//  Created by Zekhniddin Jumaev on 21/06/23.
-//
-
-import SwiftUI
-
-//struct OpeningView: View {
+//struct OpeningView2: View {
 //
 //    @State var selectedTab: Int = 0
 //    @State var showProgressView: Bool = false
@@ -86,7 +86,8 @@ import SwiftUI
 //                        .tabItem {
 //                        }.tag(1)
 //                }
-//                .tabViewStyle(PageTabViewStyle())
+//                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+//                .background(Color.green)
 //
 //            }
 //
@@ -94,5 +95,11 @@ import SwiftUI
 //                VStack { }
 //            }, text: "Loading...")
 //        }.ignoresSafeArea()
+//    }
+//}
+//
+//struct OpeningView2_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OpeningView2()
 //    }
 //}
