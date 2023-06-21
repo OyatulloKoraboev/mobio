@@ -74,9 +74,14 @@ struct Login: View {
                 authenticateUser(username: phoneNumber, password: passwordText)
                 
             } label: {
-                Text("Авторизация")
-                    .font(.montserratRegular(size:20))
-                    .foregroundColor(.white)
+                HStack {
+                    Spacer()
+                    Text("Авторизация")
+                        .font(.montserratRegular(size:20))
+                        .foregroundColor(.white)
+                    Spacer()
+                }
+                
             }
             
             .frame(maxWidth: .infinity)
