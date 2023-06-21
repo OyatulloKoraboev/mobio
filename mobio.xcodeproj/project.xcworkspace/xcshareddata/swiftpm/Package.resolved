@@ -10,12 +10,30 @@
       }
     },
     {
+      "identity" : "customalert",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/divadretlaw/CustomAlert",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ac27bcfa90ec2edbb650622d8e4ca607e626cade"
+      }
+    },
+    {
       "identity" : "input-mask-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RedMadRobot/input-mask-ios",
       "state" : {
         "revision" : "7429d5aef70544ce00cabebcf1d2dde7681cec4f",
         "version" : "7.2.8"
+      }
+    },
+    {
+      "identity" : "windowscenereader",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/divadretlaw/WindowSceneReader",
+      "state" : {
+        "revision" : "8700ee5260654666a63d8a21581a63a2972baf32",
+        "version" : "1.1.0"
       }
     }
   ],

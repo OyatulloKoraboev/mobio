@@ -7,6 +7,7 @@
 
 import SwiftUI
 import InputMask
+import CustomAlert
 
 struct Login: View {
     @EnvironmentObject var profile: Profile
@@ -19,6 +20,7 @@ struct Login: View {
     @State var nice: Bool = true
     @State var phoneNumber: String = ""
     @State var buttonState: Bool = false
+    @State var showAlert: Bool = false
     
     let service = NetworkManager()
     let tokenService = UserDefaultsManager()
@@ -89,14 +91,25 @@ struct Login: View {
             .background(
                 LinearGradient(gradient: Gradient(colors: [Color(hex: "#E41B4D"), Color(hex: "#EE3D69")]), startPoint: .leading, endPoint: .trailing)
             )
-            .opacity((phoneNumber.count == 9 && passwordText.count >= 6) ? 1.0 : 0.5)
-            .disabled(!(phoneNumber.count == 9 && passwordText.count >= 6))
+            .opacity((phoneNumber.count == 9 && passwordText.count >= 8) ? 1.0 : 0.5)
+            .disabled(!(phoneNumber.count == 9 && passwordText.count >= 8))
             .cornerRadius(25)
             .padding(EdgeInsets(top: 0, leading: 30, bottom: 40, trailing: 30))
             NavigationLink(destination: HomeView(), isActive: $loggedIn) {
                 EmptyView()
             }
         }.navigationBarHidden(true)
+            .customAlert(isPresented: $showAlert) {
+                Text("Your password or login is incorrect.")
+            } content: { } actions: {
+                Button {
+                    print("Button clicked")
+                } label: {
+                    Text("OK")
+                        .bold()
+                }
+            }
+
     }
     
     func authenticateUser(username: String, password: String){
@@ -121,6 +134,8 @@ struct Login: View {
                 tokenService.saveToken(token: token)
                 profile.isLoggedIn = true
             case .failure(let error):
+                // Show alert
+                showAlert.toggle()
                 print(error)
             }
         }

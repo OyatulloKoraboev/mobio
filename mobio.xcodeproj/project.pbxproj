@@ -46,6 +46,7 @@
 		4BE8F3572A4014360096E771 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3562A4014360096E771 /* SideBar.swift */; };
 		4BE8F3592A402F510096E771 /* SidebarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8F3582A402F510096E771 /* SidebarModel.swift */; };
 		4BF46F142A3C760700A0250C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF46F132A3C760700A0250C /* HomeView.swift */; };
+		C41AFFD02A42BE1E00F8C6EA /* CustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = C41AFFCF2A42BE1E00F8C6EA /* CustomAlert */; };
 		C45A67C82A418B4100B87D52 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A67C72A418B4100B87D52 /* UserDefaultsManager.swift */; };
 		C45A67CB2A418B5D00B87D52 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A67CA2A418B5D00B87D52 /* TokenModel.swift */; };
 		C45A67CD2A418B6E00B87D52 /* NertworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A67CC2A418B6E00B87D52 /* NertworkManager.swift */; };
@@ -110,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C45A67D02A418B9A00B87D52 /* Alamofire in Frameworks */,
+				C41AFFD02A42BE1E00F8C6EA /* CustomAlert in Frameworks */,
 				C45A67D72A41C78800B87D52 /* InputMask in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +294,7 @@
 			packageProductDependencies = (
 				C45A67CF2A418B9A00B87D52 /* Alamofire */,
 				C45A67D62A41C78800B87D52 /* InputMask */,
+				C41AFFCF2A42BE1E00F8C6EA /* CustomAlert */,
 			);
 			productName = mobio;
 			productReference = 4B14FC752A3C1DFA009E1E2F /* mobio.app */;
@@ -324,6 +327,7 @@
 			packageReferences = (
 				C45A67CE2A418B9A00B87D52 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C45A67D52A41C78800B87D52 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
+				C41AFFCE2A42BE1E00F8C6EA /* XCRemoteSwiftPackageReference "CustomAlert" */,
 			);
 			productRefGroup = 4B14FC762A3C1DFA009E1E2F /* Products */;
 			projectDirPath = "";
@@ -607,6 +611,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C41AFFCE2A42BE1E00F8C6EA /* XCRemoteSwiftPackageReference "CustomAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/divadretlaw/CustomAlert";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		C45A67CE2A418B9A00B87D52 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -626,6 +638,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C41AFFCF2A42BE1E00F8C6EA /* CustomAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C41AFFCE2A42BE1E00F8C6EA /* XCRemoteSwiftPackageReference "CustomAlert" */;
+			productName = CustomAlert;
+		};
 		C45A67CF2A418B9A00B87D52 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C45A67CE2A418B9A00B87D52 /* XCRemoteSwiftPackageReference "Alamofire" */;
