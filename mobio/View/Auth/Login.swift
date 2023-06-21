@@ -43,6 +43,7 @@ struct Login: View {
                     placeholder: "+998",
                     primaryMaskFormat: "+998 ([00]) [000]-[00]-[00]"
                 )
+                .keyboardType(.numberPad)
                 .frame(height: 40)
                 .padding(.top, -8)
                 .overlay(
