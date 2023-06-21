@@ -16,7 +16,6 @@ struct Login: View {
     @State var passwordText: String = ""
     @State private var wrongUsername = 0
     @State private var wrongPassword = 0
-    @State var loggedIn:Bool = false
     @State var nice: Bool = true
     @State var phoneNumber: String = ""
     @State var buttonState: Bool = false
@@ -145,10 +144,6 @@ struct Login: View {
             .disabled(!(phoneNumber.count == 9 && passwordText.count >= 8))
             .cornerRadius(25)
             .padding(EdgeInsets(top: 0, leading: 30, bottom: 40, trailing: 30))
-            NavigationLink(destination: HomeView(), isActive: $loggedIn) {
-                EmptyView()
-            }
-            
             
         }.navigationBarHidden(true)
             .customAlert(isPresented: $showAlert) {

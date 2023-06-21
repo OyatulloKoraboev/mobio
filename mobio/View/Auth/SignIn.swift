@@ -8,7 +8,6 @@
 import SwiftUI
 import InputMask
 
-
 struct SignIn: View {
     @State var username: String = ""
 
