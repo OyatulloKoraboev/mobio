@@ -18,7 +18,7 @@ struct Login: View {
     @State var loggedIn:Bool = false
     @State var nice: Bool = true
     @State var phoneNumber: String = ""
-
+    @State var buttonState: Bool = false
     
     let service = NetworkManager()
     let tokenService = UserDefaultsManager()
@@ -89,6 +89,8 @@ struct Login: View {
             .background(
                 LinearGradient(gradient: Gradient(colors: [Color(hex: "#E41B4D"), Color(hex: "#EE3D69")]), startPoint: .leading, endPoint: .trailing)
             )
+            .opacity((phoneNumber.count == 9 && passwordText.count >= 6) ? 1.0 : 0.5)
+            .disabled(!(phoneNumber.count == 9 && passwordText.count >= 6))
             .cornerRadius(25)
             .padding(EdgeInsets(top: 0, leading: 30, bottom: 40, trailing: 30))
             NavigationLink(destination: HomeView(), isActive: $loggedIn) {
