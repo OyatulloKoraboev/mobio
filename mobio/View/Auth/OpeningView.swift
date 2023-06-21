@@ -11,7 +11,8 @@ import Combine
 struct OpeningView: View {
     @State var isLoginPagePressed:Bool = true
     @State var isSignInPagePressed:Bool = false
-    
+    @State var showProgressView: Bool = false
+
     var body: some View {
         NavigationView{
             ZStack{
@@ -81,7 +82,7 @@ struct OpeningView: View {
                     
                     if isLoginPagePressed{
                         withAnimation {
-                            Login()
+                            Login(showProgressView: $showProgressView)
                                 .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
                         }
                     }else{
@@ -94,6 +95,10 @@ struct OpeningView: View {
                     Spacer()
                 }
                 
+                
+                CircularLoadingView(isShowing: $showProgressView, content: {
+                    VStack { }
+                }, text: "Loading...")
             }.ignoresSafeArea()
         }
     }
@@ -103,5 +108,38 @@ struct OpeningView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         OpeningView()
+    }
+}
+
+
+struct CircularLoadingView<Content>: View where Content: View {
+
+    @Binding var isShowing: Bool
+    var content: () -> Content
+    var text: String?
+
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .center) {
+                content()
+                    .disabled(isShowing)
+                    .blur(radius: isShowing ? 2 : 0)
+                
+                if isShowing {
+                    Rectangle()
+                        .fill(Color.black).opacity(isShowing ? 0.6 : 0)
+                        .edgesIgnoringSafeArea(.all)
+
+                    VStack(spacing: 48) {
+                        ProgressView().scaleEffect(1.8, anchor: .center)
+                        Text(text ?? "Loading...").font(.title3).fontWeight(.semibold)
+                    }
+                    .frame(width: 250, height: 200)
+                    .background(Color.white)
+                    .foregroundColor(Color.primary)
+                    .cornerRadius(16)
+                }
+            }
+        }
     }
 }
