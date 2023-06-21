@@ -52,6 +52,9 @@
 		C45A67CD2A418B6E00B87D52 /* NertworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A67CC2A418B6E00B87D52 /* NertworkManager.swift */; };
 		C45A67D02A418B9A00B87D52 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C45A67CF2A418B9A00B87D52 /* Alamofire */; };
 		C45A67D72A41C78800B87D52 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = C45A67D62A41C78800B87D52 /* InputMask */; };
+		C4B95E992A42D61B00139081 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = C4B95E982A42D61B00139081 /* KeyboardObserving */; };
+		C4B95E9B2A42F67D00139081 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B95E9A2A42F67D00139081 /* Test.swift */; };
+		C4B95E9E2A43006D00139081 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = C4B95E9D2A43006D00139081 /* SlidingTabView */; };
 		C4EED0702A3F52CE0080BE8B /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */; };
 		C4EED0732A400DF10080BE8B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EED0722A400DF10080BE8B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +104,7 @@
 		C45A67C72A418B4100B87D52 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C45A67CA2A418B5D00B87D52 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		C45A67CC2A418B6E00B87D52 /* NertworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NertworkManager.swift; sourceTree = "<group>"; };
+		C4B95E9A2A42F67D00139081 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		C4EED06F2A3F52CE0080BE8B /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		C4EED0722A400DF10080BE8B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +115,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C45A67D02A418B9A00B87D52 /* Alamofire in Frameworks */,
+				C4B95E9E2A43006D00139081 /* SlidingTabView in Frameworks */,
+				C4B95E992A42D61B00139081 /* KeyboardObserving in Frameworks */,
 				C41AFFD02A42BE1E00F8C6EA /* CustomAlert in Frameworks */,
 				C45A67D72A41C78800B87D52 /* InputMask in Frameworks */,
 			);
@@ -235,6 +241,7 @@
 				4BB2795D2A41A62500BE6302 /* Components */,
 				C4EED06E2A3F52AE0080BE8B /* Tabbar */,
 				4BB2795C2A41A61A00BE6302 /* Screens */,
+				C4B95E9A2A42F67D00139081 /* Test.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +302,8 @@
 				C45A67CF2A418B9A00B87D52 /* Alamofire */,
 				C45A67D62A41C78800B87D52 /* InputMask */,
 				C41AFFCF2A42BE1E00F8C6EA /* CustomAlert */,
+				C4B95E982A42D61B00139081 /* KeyboardObserving */,
+				C4B95E9D2A43006D00139081 /* SlidingTabView */,
 			);
 			productName = mobio;
 			productReference = 4B14FC752A3C1DFA009E1E2F /* mobio.app */;
@@ -328,6 +337,8 @@
 				C45A67CE2A418B9A00B87D52 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C45A67D52A41C78800B87D52 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
 				C41AFFCE2A42BE1E00F8C6EA /* XCRemoteSwiftPackageReference "CustomAlert" */,
+				C4B95E972A42D61B00139081 /* XCRemoteSwiftPackageReference "KeyboardObserving" */,
+				C4B95E9C2A43006D00139081 /* XCRemoteSwiftPackageReference "SlidingTabView" */,
 			);
 			productRefGroup = 4B14FC762A3C1DFA009E1E2F /* Products */;
 			projectDirPath = "";
@@ -394,6 +405,7 @@
 				4B14FCC32A3C2839009E1E2F /* Font + Ext.swift in Sources */,
 				4BE8F3572A4014360096E771 /* SideBar.swift in Sources */,
 				4B14FC8A2A3C1E43009E1E2F /* UIColor + Ext.swift in Sources */,
+				C4B95E9B2A42F67D00139081 /* Test.swift in Sources */,
 				4BB279612A41A72800BE6302 /* Product.swift in Sources */,
 				C4EED0732A400DF10080BE8B /* SettingsView.swift in Sources */,
 				C45A67CD2A418B6E00B87D52 /* NertworkManager.swift in Sources */,
@@ -635,6 +647,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		C4B95E972A42D61B00139081 /* XCRemoteSwiftPackageReference "KeyboardObserving" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nickffox/KeyboardObserving";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C4B95E9C2A43006D00139081 /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -652,6 +680,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C45A67D52A41C78800B87D52 /* XCRemoteSwiftPackageReference "input-mask-ios" */;
 			productName = InputMask;
+		};
+		C4B95E982A42D61B00139081 /* KeyboardObserving */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4B95E972A42D61B00139081 /* XCRemoteSwiftPackageReference "KeyboardObserving" */;
+			productName = KeyboardObserving;
+		};
+		C4B95E9D2A43006D00139081 /* SlidingTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4B95E9C2A43006D00139081 /* XCRemoteSwiftPackageReference "SlidingTabView" */;
+			productName = SlidingTabView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

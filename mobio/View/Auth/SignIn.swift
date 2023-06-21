@@ -42,11 +42,11 @@ struct SignIn: View {
         
     }
     
-    struct Login_Previews: PreviewProvider {
-        static var previews: some View {
-            SignIn()
-        }
-    }
+//    struct Login_Previews: PreviewProvider {
+//        static var previews: some View {
+//            SignIn()
+//        }
+//    }
 }
 
 struct ExtractedView: View {

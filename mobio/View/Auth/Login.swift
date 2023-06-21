@@ -166,20 +166,6 @@ struct Login: View {
     
     func authenticateUser(username: String, password: String){
         print(username, password, "salom")
-        //        if username.lowercased() == "abc" {
-        //            wrongUsername = 0
-        //            if password.lowercased() == "123"{
-        //                wrongPassword = 0
-        //
-        //                loggedIn = true
-        //            }
-        //            else{
-        //                wrongPassword = 2
-        //            }
-        //        }
-        //        else{
-        //            wrongUsername = 2
-        //        }
         showProgressView = true
         service.performRequest(phoneNum: username, password: password) { response in
             showProgressView = false
@@ -194,10 +180,4 @@ struct Login: View {
             }
         }
     }
-    
-    //    struct SignIn_Previews: PreviewProvider {
-    //        static var previews: some View {
-    //            Login()
-    //        }
-    //    }
 }

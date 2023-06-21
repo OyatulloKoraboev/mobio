@@ -28,6 +28,24 @@
       }
     },
     {
+      "identity" : "keyboardobserving",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nickffox/KeyboardObserving",
+      "state" : {
+        "branch" : "master",
+        "revision" : "48134b5460435cc9d048223ad7560ee2e40f3d4a"
+      }
+    },
+    {
+      "identity" : "slidingtabview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/QuynhNguyen/SlidingTabView",
+      "state" : {
+        "revision" : "b0f0662977418824d50546b2850a523dcd793bb0",
+        "version" : "1.0.2"
+      }
+    },
+    {
       "identity" : "windowscenereader",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/divadretlaw/WindowSceneReader",
